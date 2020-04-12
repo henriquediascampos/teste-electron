@@ -2,9 +2,9 @@
   "name": "electron-teste",
   "version": "1.0.0",
   "description": "aprendendo a mexer com electron",
-  "main": "index.js",
+  "main": "src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/henriquediascampos/teste-electron/issues"
   },
-  "homepage": "https://github.com/henriquediascampos/teste-electron#readme"
+  "homepage": "https://github.com/henriquediascampos/teste-electron#readme",
+  "devDependencies": {
+    "electron": "^8.2.1"
+  }
 }
