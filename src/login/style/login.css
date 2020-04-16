@@ -1,0 +1,83 @@
+body {
+    background-color: rgb(71, 71, 71);
+}
+
+.container {
+    flex-direction: column
+}
+
+.margin > *:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.input-text {
+    border-style: none;
+    border-bottom-style: solid;
+    border-width: 0 0 1px 0;
+    user-select: none;
+    outline: none;
+    height: 30px;
+    width: 200px;
+    background-color: rgb(71, 71, 71);;
+    text-align: center;
+    border-bottom-color: rgba(255, 195, 117, 0.658);
+    font-size: 10pt;
+    color: white;
+}
+
+
+#user {
+
+}
+
+#pass {
+
+}
+
+#submit_login {
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: rgb(223, 140, 64);
+    color: white;
+    font-size: 12pt;
+    font-weight: bold;
+    user-select: none;
+}
+
+#submit_login:hover {
+    background-color: rgb(252, 186, 125);
+}
+
+#submit_login:active {
+    background-color: rgb(226, 112, 5);
+}
+
+#forget_password {
+    margin-top: 15px;
+}
+
+.button_axi {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.795);
+    cursor: pointer;
+    user-select: none;
+}
+#forget_password:hover {
+    text-decoration: underline;
+}
+
+#create_user:hover {
+    text-decoration: underline;
+}
+
+#forget_password:active {
+        color:  rgb(226, 112, 5);
+}
+
+#create_user:active {
+    color: rgb(226, 112, 5);
+}
