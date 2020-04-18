@@ -1,8 +1,10 @@
 const { BrowserWindow } = require('electron');
 const path = require('path');
 
-const createSplash = () => {
-    const windowSplash = new BrowserWindow({
+class Splash {
+
+  constructor() {
+    this.windowSplash = new BrowserWindow({
       width: 370,
       height: 370,
       icon: 'assets/book-icon.png',
@@ -12,12 +14,15 @@ const createSplash = () => {
       }
     });
 
-    console.log(__dirname);
-    
-    windowSplash.loadURL(path.join('file://', __dirname, '/../view/splash.html'));
-    // windowSplash.webContents.openDevTools();
-    return windowSplash;
-}   
+    this.windowSplash.loadURL(path.join('file://', __dirname, '/../view/splash.html'));
+  }
 
+  hide() {
+    if (this.windowSplash)
+      this.windowSplash.hide();
+    else
+      this.hide();
+  }
+}
 
-module.exports = { createSplash };
+module.exports = { Splash };

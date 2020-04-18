@@ -6,16 +6,28 @@
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="../style/login.css">
     <title>Document</title>
+    
+
 </head>
 <body class="flex all-center container margin">
     <div class="flex container margin">
         <input type="text" id="user" class="input-text">
         <input type="password" id="pass" class="input-text">
     </div>
+
     <div class="flex container margin">
-        <button id="submit_login">Submit</button>
+        <button id="submit_login" onclick="teste()" >Submit</button>
         <span id="forget_password" class="button_axi">I forgot my password</span>
         <span id="create_user" class="button_axi">Create new user</span>
     </div>
 </body>
+
+<script >
+    const { ipcRenderer } = require('electron');
+
+     function teste() {
+         ipcRenderer.send('error');
+         console.log(ipcRenderer, 'teste')
+     }
+ </script> 
 </html>

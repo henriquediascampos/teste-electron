@@ -1,24 +1,33 @@
 const { BrowserWindow } = require('electron');
+
 const path = require('path');
+const { BasicWindow } = require('../../abstract/BasicWindow');
 
-const createLogin = () => {
-    const windowLogin = new BrowserWindow({
-      width: 370,
-      height: 600,
-      show: false,
-      // frame: false,
-      webPreferences: {
-        nodeIntegration: true
-      }
-    });
-    windowLogin.loadURL(path.join('file://', __dirname, '/../view/login.html'));
-   
-    windowLogin.webContents.openDevTools()
-    windowLogin.once('ready-to-show', () => {
-      windowLogin.show();
-    });
+class Login extends BasicWindow {
 
-    return windowLogin;
+  constructor() {
+    super(
+      new BrowserWindow({
+        width: 370,
+        height: 600,
+        show: false,
+        x: 2,
+        y: 2,
+        // frame: false,
+        webPreferences: {
+          nodeIntegration: true,
+          // nativeWindowOpen: true,
+        },
+        icon: 'assets/book-icon.png',
+      }));
+
+      setTimeout(() => {
+        this.window.loadURL(path.join('file://', __dirname, '/../view/login.html'));
+    }, 2000);
+
+    // this.window.webContents.openDevTools()
+  }
 }
 
-module.exports = { createLogin };
+
+module.exports = { Login };

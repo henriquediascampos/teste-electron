@@ -1,19 +1,11 @@
-const { app } = require('electron')
-const { createSplash } = require('./splash/controller/splash');
-const { createLogin } = require('./login/controller/login');
+const { app, ipcMain, dialog } = require('electron')
+const { Routing, startRouter, routerInstance } = require('./start/routing');
 
-let windowSplash = null
-let windowLogin = null
-
-
+let routing = null;
 
 app.on('ready', () => {
-  // windowSplash = createSplash();
-
-  // setTimeout(() => {
-    // windowSplash.hide();
-      windowLogin = createLogin();
-  // }, 3500);
+  const routing = startRouter();
+  routing.then((route) => route.init());
 });
 
 
@@ -27,5 +19,4 @@ app.on('ready', () => {
 // app.on('activate', () => {
 // });
 
-
-
+module.exports = { routing }
