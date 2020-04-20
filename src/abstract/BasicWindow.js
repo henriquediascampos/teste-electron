@@ -31,12 +31,24 @@ class BasicWindow {
             });
             this.window.show();
         } else {
-            const a = this.ready();
-            a.then((ready) => {
+            const ready = this.ready();
+            ready.then((ready) => {
                 hidden.forEach(win => {
                     win.hide();
                 });
                 this.window.show()
+            });
+        }
+    }
+
+    maximize() {
+        if (this.isReady) {
+            this.window.maximize();
+
+        } else {
+            const ready = this.ready();
+            ready.then((ready) => {
+                this.window.maximize();
             });
         }
     }

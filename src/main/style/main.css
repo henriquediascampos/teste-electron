@@ -1,0 +1,21 @@
+#sidebar-tool {
+    width: 48px;
+}
+
+#sidebar-tool-expansive {
+    width: 275px;
+    font-size: small;
+}
+
+#topbar-tool {
+    height: 35px;
+    font-size: small;
+}
+
+#books-reader {
+    font-size: medium;
+}
+
+#view-book {
+    border-right: 1px inset rgb(50, 50, 50);
+}

@@ -5,10 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../../style/style.css">
+    <link rel="stylesheet" href="../style/main.css">
 </head>
 
-<body>
-    <h1 onclick="teste()">main</h1>
+<body class="flex">
+
+    <div id="view-container" class="flex max-all-size">
+
+        <div id="side-view" class="flex">
+            <div id="sidebar-tool" class="flex direction-column details-theme"></div>
+            <div id="sidebar-tool-expansive" class="flex direction-column contrast-theme"></div>
+        </div>
+
+        <div id="view-books" class="flex direction-row max-all-size">
+            <div id="view-book" class="max-all-size">
+                <div id="topbar-tool" class="flex direction-row contrast-theme">a</div>
+                <div id="books-reader" class="flex direction-column background-theme max-all-size">b</div>
+            </div>
+            <div id="view-book" class="max-all-size">
+                <div id="topbar-tool" class="flex direction-row contrast-theme">a</div>
+                <div id="books-reader" class="flex direction-column background-theme max-all-size">b</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" class="flex"></div>
 </body>
 <script>
     const { ipcRenderer } = require('electron');

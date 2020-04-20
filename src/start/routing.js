@@ -18,11 +18,13 @@ class Routing extends Singleton {
         this.splash = new Splash();
         this.main = new Main();
         this.login = new Login();
-        this.routeWindow(this.getLogin(), [this.getSplash()])
+        // this.routeWindow(this.getLogin(), [this.getSplash()])
+        this.routeWindow(this.getMain(), [this.getSplash()])
     }
 
     routeWindow(windowShow, windowHiden) {
         windowShow.show(windowHiden);
+        windowShow.maximize();
     }
 
     static getInstance() {

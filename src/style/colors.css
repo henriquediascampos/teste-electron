@@ -1,0 +1,29 @@
+
+:root {
+    --dark-mode:rgb(30, 30, 30);
+}
+
+.background-theme {
+    /* background-color: var(--dark-mode) */
+    background-color: rgb(30, 30, 30);
+    font-family: Ubuntu,Droid Sans,sans-serif;
+    color: rgb(238, 238, 238);
+}
+
+.contrast-theme {
+    background-color: rgb(40, 40, 40);
+    font-family: Ubuntu,Droid Sans,sans-serif;
+    color: rgb(204, 204, 204);
+}
+
+.details-theme {
+    background-color: rgb(128, 128, 128);
+}
+
+.color-theme {
+    color: rgb(204, 204, 204);
+}
+
+.color1-theme {
+    color: rgb(235, 235, 235);
+}

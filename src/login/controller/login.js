@@ -11,8 +11,8 @@ class Login extends BasicWindow {
         width: 370,
         height: 600,
         show: false,
-        x: 2,
-        y: 2,
+        // x: 2,
+        // y: 2,
         // frame: false,
         webPreferences: {
           nodeIntegration: true,
@@ -23,7 +23,7 @@ class Login extends BasicWindow {
 
       setTimeout(() => {
         this.window.loadURL(path.join('file://', __dirname, '/../view/login.html'));
-    }, 2000);
+    }, 20);
 
     // this.window.webContents.openDevTools()
   }

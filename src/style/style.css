@@ -1,0 +1,37 @@
+@import url(./colors.css);
+
+html, body { 
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.all-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.direction-row {
+    flex-direction: row;
+}
+
+.direction-column {
+    flex-direction: column;
+}
+
+.max-height {
+    height: 100%;
+}
+
+.max-width {
+    width: 100%;
+}
+
+.max-all-size {
+    height: 100%;
+    width: 100%;
+}
