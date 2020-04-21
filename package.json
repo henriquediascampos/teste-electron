@@ -18,5 +18,8 @@
   "homepage": "https://github.com/henriquediascampos/teste-electron#readme",
   "devDependencies": {
     "electron": "^8.2.1"
+  },
+  "dependencies": {
+    "pdf-extract": "^1.0.11"
   }
 }
